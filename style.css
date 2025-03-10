@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* 🌟 Version Mobile-First */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anonymous Pro", monospace;
+    line-height: 25px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Conteneur global */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Partie image */
+.fixed-image {
+    width: 100%;
+    height: 300px;
+    background: 	#a7b5dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.name {
+    margin-left: 20px;
+}
+
+.name h1 {
+    color: black;
+}
+
+/* Image */
+.fixed-image img {
+    width: 80%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+#img-desktop {
+    display: none;
+}
+
+
+
+
+/* Contenu */
+.content {
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+/* 📌 Menu Burger */
+.burger-menu {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background: #a7b5dc;
+}
+
+
+
+main {
+    margin-top: 40px;
+    margin-bottom: 100px;
+ }
+
+h1 {
+    color: #e39aa5;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.introduction p {
+    text-align: justify;
+}
+
+.experiences {
+    margin-top: 40px;
+}
+
+.experiences ul , .formations ul {
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+.row1 , .row2 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+figure {
+    display: block;
+    text-align: center;
+}
+
+figure i {
+    font-size: 25px;
+}
+
+.contacts {
+    margin-top: 60px;
+}
+
+.contacts h1 {
+    margin-bottom: 30px;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: black;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+
+footer {
+    position: relative;
+    bottom: 0;
+    
+}
+
+
+/* Version Desktop */
+@media screen and (min-width: 1025px) {
+    .container {
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .fixed-image {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        background: #a7b5dc;
+        display: block;
+    }
+
+    #img-mobile {
+        display: none;
+    }
+
+    #img-desktop {
+        display: block; /* Réactive l'image en desktop */
+        width: 80%;
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+    }
+
+    .name {
+        text-align: center;
+    }
+    
+    .name h1 {
+        color: black;
+    }
+
+    .content {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    /* Masquer le menu burger et afficher le menu normal */
+    .burger-menu {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        width: auto;
+    }
+
+    .menu li {
+        margin-right: 20px;
+        font-size: larger;
+    }
+
+    .menu li a {
+        color: black;
+    }
+
+    main {
+       margin-right: 660px;
+       margin-left: 30px;
+       margin-top: 40px;
+    }
+
+    .introduction p {
+        text-align: justify;
+    }
+
+    .introduction p {
+        line-height: 20px;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+
+}
